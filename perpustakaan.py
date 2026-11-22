@@ -22,3 +22,15 @@ class Perpustakaan:
 
         print("Buku berhasil ditambahkan!")
         return True
+
+    def update_buku(self, kode_buku, judul_buku, penulis, tahun_terbit):
+        if kode_buku not in self.__daftar_buku:
+            print("Buku tidak ditemukan!")
+            return False
+
+        buku = Buku(kode_buku, judul_buku, penulis, tahun_terbit)
+        self.__daftar_buku[kode_buku] = buku.format_simpan()
+        self.__file_handler.simpan_data(self.__daftar_buku)
+
+        print("Data buku berhasil diperbarui!")
+        return True
