@@ -18,9 +18,9 @@ def ubah_data(self, judul_buku, penulis, tahun_terbit):
 
 def format_simpan(self):
      return [
-          self.kode_buku,
-          self.judul_buku,
-          self.penulis,
-          str(self.tahun_terbit)
-     ]
+        self.kode_buku, 
+        self.judul_buku, 
+        self.penulis, 
+        str(self.tahun_terbit)
+    ]
     
