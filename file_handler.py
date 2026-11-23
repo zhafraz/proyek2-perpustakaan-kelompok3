@@ -3,11 +3,15 @@ class FileHandler:
         self.__nama_file = nama_file
 
 def baca_data(self):
-        data_buku = {}        
-        with open(self.__nama_file, 'r') as file:
-            for baris in file:
-                potongan = baris.strip().split(',')
-                data_buku[potongan[0]] = potongan
+        data_buku = {}  
+        try:
+            with open(self.__nama_file, 'r') as file:
+                for baris in file:
+                    potongan = baris.strip().split(',')
+                    data_buku[potongan[0]] = potongan
+                    
+        except FileNotFoundError:
+            pass 
                 
         return data_buku
 
