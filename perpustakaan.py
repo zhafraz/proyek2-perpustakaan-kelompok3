@@ -11,16 +11,16 @@ class Perpustakaan:
             return self.__daftar_buku[kode_buku]
         return None
 
-    def tambah_buku(self, kode_buku, judul_buku, penulis, tahun_terbit):
+    def tambah_buku(self, kode_buku, judul_buku, penulis, penerbit, tahun_terbit):
         if kode_buku in self.__daftar_buku:
-            print("Kode buku sudah digunakan!")
+            print("Gagal : Kode buku sudah digunakan!")
             return False
 
-        buku = Buku(kode_buku, judul_buku, penulis, tahun_terbit)
+        buku = Buku(kode_buku, judul_buku, penulis, penerbit, tahun_terbit)
         self.__daftar_buku[kode_buku] = buku.format_simpan()
         self.__file_handler.simpan_data(self.__daftar_buku)
 
-        print("Buku berhasil ditambahkan!")
+        print("Berhasil : Buku berhasil ditambahkan!")
         return True
 
     def update_buku(self, kode_buku, judul_buku, penulis, tahun_terbit):
