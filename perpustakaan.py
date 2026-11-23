@@ -12,7 +12,6 @@ class Perpustakaan:
         return None
 
     def tambah_buku(self, kode_buku, judul_buku, penulis, penerbit, tahun_terbit):
-        # Ditambahkan parameter 'penerbit' sesuai UML
         if kode_buku in self.__daftar_buku:
             print("Gagal: Kode buku sudah digunakan!")
             return False
@@ -25,7 +24,6 @@ class Perpustakaan:
         return True
 
     def update_buku(self, kode_buku, judul_buku, penulis, penerbit, tahun_terbit):
-        # Ditambahkan parameter 'penerbit' sesuai UML
         if kode_buku not in self.__daftar_buku:
             print("Gagal: Buku tidak ditemukan!")
             return False
