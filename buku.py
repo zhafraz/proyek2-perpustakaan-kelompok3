@@ -8,7 +8,7 @@ class Buku:
 
     def tampilkan_info(self):
         print("Kode Buku :", self.kode_buku)
-        print("Judul Buku :", self.judul)
+        print("Judul Buku :", self.judul_buku)
         print("Penulis :", self.penulis)
         print("Penerbit :", self.penerbit)
         print("Tahun Terbit :", self.tahun_terbit)
