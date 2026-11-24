@@ -1,5 +1,5 @@
-from buku import Buku
-from file_handler import FileHandler
+from modules.buku import Buku
+from modules.file_handler import FileHandler
 
 class Perpustakaan:
     def __init__(self, nama_file):

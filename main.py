@@ -1,4 +1,4 @@
-from perpustakaan import Perpustakaan
+from modules.perpustakaan import Perpustakaan
 
 def menu_tambah(perpus):
     print("\n--- [1] Tambah Data Buku ---")
@@ -103,8 +103,7 @@ def tampilkan_pilihan():
     print("=" * 35)
 
 def main():
-    perpus = Perpustakaan("data_buku.txt")
-
+    perpus = Perpustakaan("data/data_buku.txt")
     while True:
         tampilkan_pilihan()
         pilihan = input("Pilih menu (0-5): ").strip()
@@ -120,7 +119,7 @@ def main():
         elif pilihan == "5":
             menu_tampilkan(perpus)
         elif pilihan == "0":
-            print("\nTerima kasih telah menggunakan aplikasi ini. Program selesai.")
+            print("\nTerima kasih.")
             break
         else:
             print("\nPilihan tidak valid, silakan coba lagi!")
