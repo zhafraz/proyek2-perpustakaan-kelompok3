@@ -14,10 +14,10 @@ class Buku:
         print("Tahun Terbit :", self.tahun_terbit)
 
     def ubah_data(self, judul_buku, penulis, penerbit, tahun_terbit):
-            self.judul_buku = judul_buku
-            self.penulis = penulis
-            self.penerbit = penerbit
-            self.tahun_terbit = tahun_terbit
+        self.judul_buku = judul_buku
+        self.penulis = penulis
+        self.penerbit = penerbit
+        self.tahun_terbit = tahun_terbit
 
     def format_simpan(self):
         return [
